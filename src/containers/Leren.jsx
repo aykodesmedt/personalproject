@@ -4,38 +4,38 @@ import Menu from "../components/Menu.jsx";
 import Hand from "../components/Hand.jsx";
 
 const letters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z"
+  `A`,
+  `B`,
+  `C`,
+  `D`,
+  `E`,
+  `F`,
+  `G`,
+  `H`,
+  `I`,
+  `J`,
+  `K`,
+  `L`,
+  `M`,
+  `N`,
+  `O`,
+  `P`,
+  `Q`,
+  `R`,
+  `S`,
+  `T`,
+  `U`,
+  `V`,
+  `W`,
+  `X`,
+  `Y`,
+  `Z`
 ];
 
 class Leren extends Component {
   constructor(props) {
     super(props);
-    this.state = { letter: "a" };
+    this.state = { letter: `A` };
     this.handleClickLetter = this.handleClickLetter.bind(this);
   }
 
