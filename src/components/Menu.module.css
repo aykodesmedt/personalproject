@@ -1,0 +1,17 @@
+.active {
+  color: red;
+}
+
+.menu {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigatie {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
