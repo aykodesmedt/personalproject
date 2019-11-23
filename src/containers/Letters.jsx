@@ -3,6 +3,8 @@ import Menu from "../components/Menu.jsx";
 
 import Webcam from "../components/Webcam.jsx";
 
+import stylesUIControls from "./../styles/uiControls.module.css";
+
 const letters = [
   `A`,
   `B`,
@@ -55,6 +57,7 @@ class Letters extends Component {
             <button
               onClick={e => this.handleClickLetter(e.currentTarget.innerHTML)}
               key={letter}
+              className={stylesUIControls.letterButton}
             >
               {letter}
             </button>

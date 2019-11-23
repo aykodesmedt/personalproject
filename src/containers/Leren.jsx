@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Menu from "../components/Menu.jsx";
 import Hand from "../components/Hand.jsx";
 
+import stylesUIControls from "./../styles/uiControls.module.css";
+
 const letters = [
   `A`,
   `B`,
@@ -55,12 +57,12 @@ class Leren extends Component {
             <button
               onClick={e => this.handleClickLetter(e.currentTarget.innerHTML)}
               key={letter}
+              className={stylesUIControls.letterButton}
             >
               {letter}
             </button>
           );
         })}
-        {/* {console.log(this.state)} */}
         <Hand letter={this.state.letter} />
       </>
     );

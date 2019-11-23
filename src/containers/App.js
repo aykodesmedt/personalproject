@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import "./App.module.css";
+// import styles from "./App.module.css";
+import colors from "./../styles/colors.module.css";
 
 import Home from "./Home";
 import Leren from "./Leren";
@@ -10,7 +11,7 @@ import Woorden from "./Woorden";
 class App extends Component {
   render() {
     return (
-      <main>
+      <main className={colors.backgroundColor}>
         <Switch>
           <Route path="/" exact strict component={Home} />
           <Route path="/leren" component={Leren} />

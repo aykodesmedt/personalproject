@@ -1,0 +1,7 @@
+.letterButton {
+  background-color: var(--blue);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 1rem;
+}

@@ -1,0 +1,18 @@
+:global(:root) {
+  --blue: #53cabc;
+  --yellow: #f6d135;
+  --purple: #af77f4;
+  --red: #ef4d39;
+}
+
+.backgroundColor {
+  min-height: 100vh;
+  background-image: radial-gradient(
+    circle,
+    #52495e,
+    #483f54,
+    #3f364a,
+    #352d40,
+    #2c2437
+  );
+}
