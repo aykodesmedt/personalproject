@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import LettersGroot from "./../components/LettersGroot.jsx";
-import LerenGroot from "./../components/LerenGroot.jsx";
-import WoordenGroot from "./../components/WoordenGroot.jsx";
+import LettersSVG from "./../components/LettersSVG.jsx";
+import LerenSVG from "./../components/LerenSVG.jsx";
+import WoordenSVG from "./../components/WoordenSVG.jsx";
 
 const Home = () => {
   return (
@@ -12,19 +12,19 @@ const Home = () => {
       <ul>
         <li>
           <Link to="/leren">
-            <LerenGroot />
+            <LerenSVG width="100" height="125" color="kleur" />
             Leren
           </Link>
         </li>
         <li>
           <Link to="/letters">
-            <LettersGroot />
+            <LettersSVG width="125" height="125" color="kleur" />
             Letters
           </Link>
         </li>
         <li>
           <Link to="/woorden">
-            <WoordenGroot />
+            <WoordenSVG width="122" height="124" color="kleur" />
             Woorden
           </Link>
         </li>

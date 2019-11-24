@@ -1,34 +1,36 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-// import * as THREE from "three";
+import styles from "./Hand.module.css";
+
+import * as THREE from "three";
 // import dracoloader
 
 class Hand extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { rotation: 0 };
+  }
+
   componentDidMount() {
     // === THREE.JS CODE START ===
-    // var scene = new THREE.Scene();
-    // var camera = new THREE.PerspectiveCamera(
-    //   75,
-    //   window.innerWidth / window.innerHeight,
-    //   0.1,
-    //   1000
-    // );
-    // var renderer = new THREE.WebGLRenderer();
-    // renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
-    // document.body.appendChild(renderer.domElement);
-    // var geometry = new THREE.BoxGeometry(1, 1, 1);
-    // var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    // var cube = new THREE.Mesh(geometry, material);
-    // scene.add(cube);
-    // camera.position.z = 5;
-    // var animate = function() {
-    //   requestAnimationFrame(animate);
-    //   cube.rotation.x += 0.01;
-    //   cube.rotation.y += 0.01;
-    //   renderer.render(scene, camera);
-    // };
-    // animate();
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    var canvas = document.querySelector(`#letter`);
+    var renderer = new THREE.WebGLRenderer({ canvas });
+    renderer.setSize(window.innerWidth / 3, window.innerHeight / 3);
+    var geometry = new THREE.BoxGeometry(1, 1, 1);
+    var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    var cube = new THREE.Mesh(geometry, material);
+
+    scene.add(cube);
+    camera.position.z = 5;
+    renderer.render(scene, camera);
     //
     // === THREE.JS EXAMPLE CODE END ===
     // // VANAF HIER EINGEN 3D INLADEN
@@ -62,10 +64,53 @@ class Hand extends Component {
     // );
   }
 
+  handleChange = e => {
+    // console.log(e.currentTarget.value);
+    this.setState({ rotation: e.currentTarget.value });
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    var canvas = document.querySelector(`#letter`);
+    var renderer = new THREE.WebGLRenderer({ canvas });
+    renderer.setSize(window.innerWidth / 3, window.innerHeight / 3);
+    var geometry = new THREE.BoxGeometry(1, 1, 1);
+    var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    var cube = new THREE.Mesh(geometry, material);
+    cube.rotation.y = this.state.rotation;
+    scene.add(cube);
+    camera.position.z = 5;
+    // var animate = function() {
+    //   requestAnimationFrame(animate);
+    //   cube.rotation.x += 0.01;
+    //   cube.rotation.y += 0.01;
+    //   renderer.render(scene, camera);
+    // };
+    // animate();
+    renderer.render(scene, camera);
+  };
+
   render() {
     return (
       <>
-        <p>{this.props.letter}</p>
+        <div className={styles.wrapper}>
+          <p>{this.props.letter}</p>
+          <canvas id="letter"></canvas>
+          <label htmlFor="slider">{this.state.rotation}</label>
+          <input
+            type="range"
+            id="slider"
+            name="slider"
+            min="0"
+            max="10"
+            defaultValue="0"
+            step="1"
+            onChange={this.handleChange}
+          />
+        </div>
       </>
     );
   }

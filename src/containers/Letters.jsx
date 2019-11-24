@@ -3,6 +3,7 @@ import Menu from "../components/Menu.jsx";
 
 import Webcam from "../components/Webcam.jsx";
 
+import stylesLeren from "./Leren.module.css";
 import stylesUIControls from "./../styles/uiControls.module.css";
 
 const letters = [
@@ -43,27 +44,33 @@ class Letters extends Component {
 
   handleClickLetter(e) {
     console.log(e);
-    this.setState(state => ({
+    this.setState({
       letter: e
-    }));
+    });
   }
 
   render() {
     return (
       <>
         <Menu />
-        {letters.map(letter => {
-          return (
-            <button
-              onClick={e => this.handleClickLetter(e.currentTarget.innerHTML)}
-              key={letter}
-              className={stylesUIControls.letterButton}
-            >
-              {letter}
-            </button>
-          );
-        })}
-        <Webcam letter={this.state.letter} />
+        <div className={stylesLeren.LeerGrid}>
+          <div className={stylesLeren.letters}>
+            {letters.map(letter => {
+              return (
+                <button
+                  onClick={e =>
+                    this.handleClickLetter(e.currentTarget.innerHTML)
+                  }
+                  key={letter}
+                  className={stylesUIControls.letterButton}
+                >
+                  {letter}
+                </button>
+              );
+            })}
+          </div>
+          <Webcam letter={this.state.letter} />
+        </div>
       </>
     );
   }

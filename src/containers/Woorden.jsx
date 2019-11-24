@@ -17,10 +17,10 @@ class Woorden extends Component {
 
   handleClickWoord(e) {
     // console.log(e.split(``));
-    this.setState(state => ({
+    this.setState({
       woord: e,
       letters: e.split(``)
-    }));
+    });
   }
 
   toggleShow() {
@@ -42,6 +42,7 @@ class Woorden extends Component {
               <button
                 onClick={e => this.handleClickWoord(e.currentTarget.innerHTML)}
                 key={woord}
+                className={stylesUIControls.letterButton}
               >
                 {woord}
               </button>

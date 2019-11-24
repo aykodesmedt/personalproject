@@ -1,9 +1,13 @@
 import React from "react";
 
-const Webcam = () => {
+import styles from "./Hand.module.css";
+
+const Webcam = ({ letter }) => {
   return (
     <>
-      <p>webcam</p>
+      <div className={styles.wrapper}>
+        <p>{letter}</p>
+      </div>
     </>
   );
 };

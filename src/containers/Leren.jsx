@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Menu from "../components/Menu.jsx";
 import Hand from "../components/Hand.jsx";
 
+import styles from "./Leren.module.css";
 import stylesUIControls from "./../styles/uiControls.module.css";
 
 const letters = [
@@ -43,27 +44,33 @@ class Leren extends Component {
 
   handleClickLetter(e) {
     console.log(e);
-    this.setState(state => ({
+    this.setState({
       letter: e
-    }));
+    });
   }
 
   render() {
     return (
       <>
         <Menu />
-        {letters.map(letter => {
-          return (
-            <button
-              onClick={e => this.handleClickLetter(e.currentTarget.innerHTML)}
-              key={letter}
-              className={stylesUIControls.letterButton}
-            >
-              {letter}
-            </button>
-          );
-        })}
-        <Hand letter={this.state.letter} />
+        <div className={styles.LeerGrid}>
+          <div className={styles.letters}>
+            {letters.map(letter => {
+              return (
+                <button
+                  onClick={e =>
+                    this.handleClickLetter(e.currentTarget.innerHTML)
+                  }
+                  key={letter}
+                  className={stylesUIControls.letterButton}
+                >
+                  {letter}
+                </button>
+              );
+            })}
+          </div>
+          <Hand letter={this.state.letter} />
+        </div>
       </>
     );
   }

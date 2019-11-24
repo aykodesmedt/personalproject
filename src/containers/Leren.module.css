@@ -1,0 +1,14 @@
+.LeerGrid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.letters {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.letters > button {
+  font-size: 2.4rem;
+}
