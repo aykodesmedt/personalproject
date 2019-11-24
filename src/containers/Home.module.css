@@ -1,0 +1,20 @@
+.blueBg {
+  composes: tegel from "../styles/uiControls.module.css";
+  background-image: linear-gradient(to bottom, #53cabc, #1aa194);
+}
+
+.yellowBg {
+  composes: tegel from "../styles/uiControls.module.css";
+  background-image: linear-gradient(to bottom, #f6d135, #c2a300);
+}
+
+.purpleBg {
+  composes: tegel from "../styles/uiControls.module.css";
+  background-image: linear-gradient(to bottom, #af77f4, #8d58d1);
+}
+
+.title {
+  font-size: 3.6rem;
+  color: white;
+  padding-bottom: 4rem;
+}

@@ -5,30 +5,35 @@ import LettersSVG from "./../components/LettersSVG.jsx";
 import LerenSVG from "./../components/LerenSVG.jsx";
 import WoordenSVG from "./../components/WoordenSVG.jsx";
 
+import styles from "./Home.module.css";
+import stylesLayout from "../styles/layout.module.css";
+
 const Home = () => {
   return (
     <>
-      <h1>Vlaamse Gebarentaal Alfabet</h1>
-      <ul>
-        <li>
-          <Link to="/leren">
-            <LerenSVG width="100" height="125" color="kleur" />
-            Leren
-          </Link>
-        </li>
-        <li>
-          <Link to="/letters">
-            <LettersSVG width="125" height="125" color="kleur" />
-            Letters
-          </Link>
-        </li>
-        <li>
-          <Link to="/woorden">
-            <WoordenSVG width="122" height="124" color="kleur" />
-            Woorden
-          </Link>
-        </li>
-      </ul>
+      <div className={stylesLayout.center}>
+        <h1 className={styles.title}>Vlaamse Gebarentaal Alfabet</h1>
+        <ul className={stylesLayout.row}>
+          <li className={styles.blueBg}>
+            <Link to="/leren">
+              <LerenSVG width="100" height="125" color="kleur" />
+              <span>Leren</span>
+            </Link>
+          </li>
+          <li className={styles.yellowBg}>
+            <Link to="/letters">
+              <LettersSVG width="125" height="125" color="kleur" />
+              <span>Letters</span>
+            </Link>
+          </li>
+          <li className={styles.purpleBg}>
+            <Link to="/woorden">
+              <WoordenSVG width="122" height="124" color="kleur" />
+              <span>Woorden</span>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 import styles from "./Menu.module.css";
 
 import LerenSVG from "./LerenSVG.jsx";
@@ -10,18 +10,47 @@ const Menu = () => {
   return (
     <>
       <div className={styles.menu}>
-        <NavLink to="/">Leer Vlaamse Gebarentaal</NavLink>
+        <NavLink to="/" className={styles.title}>
+          Leer Vlaamse Gebarentaal
+        </NavLink>
         <div className={styles.navigatie}>
           <NavLink to="/Leren" activeClassName={styles.active}>
-            <LerenSVG width="26" height="33" color="wit" />
+            <Route
+              path="/Leren"
+              children={({ match }) => (
+                <LerenSVG
+                  width="26"
+                  height="33"
+                  color={match ? `kleur` : `wit`}
+                />
+              )}
+            />
             <p>Leren</p>
           </NavLink>
           <NavLink to="/Letters" activeClassName={styles.active}>
-            <LettersSVG width="33" height="33" color="wit" />
+            <Route
+              path="/Letters"
+              children={({ match }) => (
+                <LettersSVG
+                  width="33"
+                  height="33"
+                  color={match ? `kleur` : `wit`}
+                />
+              )}
+            />
             <p>Letters</p>
           </NavLink>
           <NavLink to="/Woorden" activeClassName={styles.active}>
-            <WoordenSVG width="31" height="32" color="wit" />
+            <Route
+              path="/Woorden"
+              children={({ match }) => (
+                <WoordenSVG
+                  width="31"
+                  height="32"
+                  color={match ? `kleur` : `wit`}
+                />
+              )}
+            />
             <p>Woorden</p>
           </NavLink>
         </div>

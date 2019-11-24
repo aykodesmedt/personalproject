@@ -5,3 +5,25 @@
   padding: 2rem;
   margin: 1rem;
 }
+
+.tegel {
+  border-radius: 1rem;
+  width: 30.2rem;
+  height: 30.2rem;
+  margin: 1.6rem;
+}
+
+.tegel > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30.2rem;
+  height: 30.2rem;
+}
+
+.tegel > a > span {
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding-top: 2.4rem;
+}
