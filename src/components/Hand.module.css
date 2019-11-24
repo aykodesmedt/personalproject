@@ -1,3 +1,7 @@
 .wrapper {
   width: 33vw;
 }
+
+.hidden {
+  display: none;
+}

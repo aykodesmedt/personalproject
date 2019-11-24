@@ -35,12 +35,13 @@ class Webcam extends Component {
     return (
       <>
         <div className={styles.wrapper}>
-          <p>{this.props.letter}</p>
+          {/* <p>{this.props.letter}</p> */}
           <video
             id="video"
             src={this.state.videosrc}
             autoPlay={true}
             playsInline
+            // className={styles.hidden}
           ></video>
         </div>
       </>
