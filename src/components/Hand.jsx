@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import styles from "./Hand.module.css";
+// import styles from "./Hand.module.css";
 
 import * as THREE from "three";
 // import dracoloader
@@ -23,7 +23,7 @@ class Hand extends Component {
     );
     var canvas = document.querySelector(`#letter`);
     var renderer = new THREE.WebGLRenderer({ canvas });
-    renderer.setSize(window.innerWidth / 3, window.innerHeight / 3);
+    renderer.setSize((window.innerWidth * 3) / 5, (window.innerHeight * 3) / 5);
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
     var cube = new THREE.Mesh(geometry, material);
@@ -76,7 +76,7 @@ class Hand extends Component {
     );
     var canvas = document.querySelector(`#letter`);
     var renderer = new THREE.WebGLRenderer({ canvas });
-    renderer.setSize(window.innerWidth / 3, window.innerHeight / 3);
+    renderer.setSize((window.innerWidth * 3) / 5, (window.innerHeight * 3) / 5);
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
     var cube = new THREE.Mesh(geometry, material);
@@ -96,20 +96,22 @@ class Hand extends Component {
   render() {
     return (
       <>
-        <div className={styles.wrapper}>
+        <div>
           <p>{this.props.letter}</p>
           <canvas id="letter"></canvas>
-          <label htmlFor="slider">{this.state.rotation}</label>
-          <input
-            type="range"
-            id="slider"
-            name="slider"
-            min="0"
-            max="10"
-            defaultValue="0"
-            step="1"
-            onChange={this.handleChange}
-          />
+          <div>
+            <label htmlFor="slider">{this.state.rotation}</label>
+            <input
+              type="range"
+              id="slider"
+              name="slider"
+              min="0"
+              max="10"
+              defaultValue="0"
+              step="1"
+              onChange={this.handleChange}
+            />
+          </div>
         </div>
       </>
     );

@@ -37,3 +37,11 @@
   color: white;
   padding: 2.4rem;
 }
+
+.eigenWoordButton > span {
+  color: black;
+  font-weight: 400;
+  background-color: var(--yellow);
+  border-radius: 3rem;
+  padding: 1.6rem 2.4rem;
+}

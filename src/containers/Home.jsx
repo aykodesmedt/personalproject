@@ -33,6 +33,9 @@ const Home = () => {
             </Link>
           </li>
         </ul>
+        <Link to="/eigenWoord" className={styles.generateWordButton}>
+          Spel je eigen naam!
+        </Link>
       </div>
     </>
   );

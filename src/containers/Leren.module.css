@@ -1,15 +1,26 @@
-.LeerGrid {
+/* .LeerGrid {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+} */
+
+.LeerGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .letters {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
 }
 
 .letters > button {
   font-size: 2.4rem;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

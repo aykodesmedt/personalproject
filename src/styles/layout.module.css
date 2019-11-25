@@ -6,6 +6,12 @@
   min-height: 100vh;
 }
 
+.centerWidth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .row {
   display: flex;
   flex-direction: row;

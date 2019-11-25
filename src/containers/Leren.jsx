@@ -69,7 +69,9 @@ class Leren extends Component {
               );
             })}
           </div>
-          <Hand letter={this.state.letter} />
+          <div className={styles.output}>
+            <Hand letter={this.state.letter} />
+          </div>
         </div>
       </>
     );

@@ -57,7 +57,7 @@ class Woorden extends Component {
                 );
               })}
             </div>
-            <div>
+            <div className={stylesLeren.output}>
               <WoordHulp letters={this.state.letters} />
               <button onClick={() => this.toggleShow()}>Hide</button>
               <Webcam letter={this.state.letter} />
@@ -86,7 +86,7 @@ class Woorden extends Component {
                 );
               })}
             </div>
-            <div>
+            <div className={stylesLeren.output}>
               <button onClick={() => this.toggleShow()}>Show</button>
               <Webcam letter={this.state.letter} />
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import styles from "./Hand.module.css";
+// import styles from "./Hand.module.css";
 
 class Webcam extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class Webcam extends Component {
   render() {
     return (
       <>
-        <div className={styles.wrapper}>
+        <div>
           {/* <p>{this.props.letter}</p> */}
           <video
             id="video"

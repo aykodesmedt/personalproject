@@ -53,6 +53,9 @@ const Menu = () => {
             />
             <p>Woorden</p>
           </NavLink>
+          <NavLink to="/eigenWoord" className={styles.eigenWoordButton}>
+            <span>Eigen woord</span>
+          </NavLink>
         </div>
       </div>
     </>

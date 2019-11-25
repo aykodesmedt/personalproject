@@ -18,3 +18,12 @@
   color: white;
   padding-bottom: 4rem;
 }
+
+.generateWordButton {
+  border-radius: 4rem;
+  background-color: var(--blue);
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 2rem 5rem;
+  margin-top: 3rem;
+}

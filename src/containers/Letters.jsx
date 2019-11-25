@@ -3,6 +3,7 @@ import Menu from "../components/Menu.jsx";
 
 import Webcam from "../components/Webcam.jsx";
 
+import styles from "./Letters.module.css";
 import stylesLeren from "./Leren.module.css";
 import stylesUIControls from "./../styles/uiControls.module.css";
 
@@ -38,7 +39,11 @@ const letters = [
 class Letters extends Component {
   constructor(props) {
     super(props);
-    this.state = { letter: `A`, toggleShow: false };
+    this.state = {
+      letter: `A`,
+      toggleShow: false,
+      classname: `uiControls_letterButton__3IvMv`
+    };
   }
 
   handleClickLetter(e) {
@@ -51,6 +56,17 @@ class Letters extends Component {
         toggleShow: !state.toggleShow
       }));
     }
+    letters.forEach(letter => {
+      if (letter === e) {
+        this.setState(state => ({
+          classname: `uiControls_letterButtonActive__ZQqP9`
+        }));
+      } else {
+        this.setState(state => ({
+          classname: `uiControls_letterButton__3IvMv`
+        }));
+      }
+    });
   }
 
   toggleShow() {
@@ -61,12 +77,13 @@ class Letters extends Component {
 
   render() {
     const toggle = this.state.toggleShow;
+
     if (toggle) {
       return (
         <>
           <Menu />
           <div className={stylesLeren.LeerGrid}>
-            <div className={stylesLeren.letters}>
+            <div className={styles.letters}>
               {letters.map(letter => {
                 return (
                   <button
@@ -81,13 +98,14 @@ class Letters extends Component {
                 );
               })}
             </div>
-            <div>
+            <div className={stylesLeren.output}>
+              <p>{this.state.letter}</p>
+              <Webcam letter={this.state.letter} />
               <img
                 src={`./assets/img/` + this.state.letter + `.png`}
                 alt={this.state.letter}
               />
               <button onClick={() => this.toggleShow()}>Hide</button>
-              <Webcam letter={this.state.letter} />
             </div>
           </div>
         </>
@@ -105,16 +123,18 @@ class Letters extends Component {
                       this.handleClickLetter(e.currentTarget.innerHTML)
                     }
                     key={letter}
-                    className={stylesUIControls.letterButton}
+                    // className={stylesUIControls.letterButtonActive}
+                    className={this.state.classname}
                   >
                     {letter}
                   </button>
                 );
               })}
             </div>
-            <div>
-              <button onClick={() => this.toggleShow()}>Show</button>
+            <div className={stylesLeren.output}>
+              <p>{this.state.letter}</p>
               <Webcam letter={this.state.letter} />
+              <button onClick={() => this.toggleShow()}>Show</button>
             </div>
           </div>
         </>

@@ -7,6 +7,7 @@ import Home from "./Home";
 import Leren from "./Leren";
 import Letters from "./Letters";
 import Woorden from "./Woorden";
+import EigenWoord from "./EigenWoord";
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route path="/leren" component={Leren} />
           <Route path="/letters" component={Letters} />
           <Route path="/woorden" component={Woorden} />
+          <Route path="/eigenWoord" component={EigenWoord} />
         </Switch>
       </main>
     );

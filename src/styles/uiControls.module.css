@@ -6,6 +6,14 @@
   margin: 1rem;
 }
 
+.letterButton :active {
+  background-color: var(--purple);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 1rem;
+}
+
 .tegel {
   border-radius: 1rem;
   width: 30.2rem;
