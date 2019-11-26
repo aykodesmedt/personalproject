@@ -4,6 +4,7 @@ import WoordHulp from "../components/WoordHulp";
 import Menu from "../components/Menu.jsx";
 
 import stylesLayout from "../styles/layout.module.css";
+import styles from "./EigenWoord.module.css";
 
 class EigenWoord extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class EigenWoord extends Component {
   }
 
   handleChange(e) {
-    this.setState({ value: e, letters: e.split(``) });
+    this.setState({ value: e, letters: e.toUpperCase().split(``) });
   }
 
   handleSubmit(e) {
@@ -21,22 +22,32 @@ class EigenWoord extends Component {
   }
 
   render() {
+    const autoFocus = true;
+    console.log(this.state.letters);
     return (
       <>
         <Menu />
+        {/* <h2>Spel hier je eigen naam!</h2> */}
         <div className={stylesLayout.centerWidth}>
-          <form onSubmit={this.handleSubmit}>
-            <label htmlFor="gekozenWoord">
-              Woord:
-              <input
-                type="text"
-                value={this.state.value}
-                onChange={e => this.handleChange(e.currentTarget.value)}
-              />
+          <form onSubmit={this.handleSubmit} className={styles.form}>
+            <label htmlFor="gekozenWoord" className={styles.label}>
+              Je naam
             </label>
+            <input
+              id="gekozenWoord"
+              type="text"
+              value={this.state.value}
+              onChange={e => this.handleChange(e.currentTarget.value)}
+              className={styles.input}
+              autoFocus={autoFocus}
+              // maxLength="10"
+            />
+
             {/* <input type="submit" value="Submit" /> */}
           </form>
-          <WoordHulp letters={this.state.letters} />
+          <div className={stylesLayout.rowGrid}>
+            <WoordHulp letters={this.state.letters} />
+          </div>
         </div>
       </>
     );

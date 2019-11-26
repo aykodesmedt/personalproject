@@ -3,7 +3,7 @@ import Menu from "../components/Menu.jsx";
 
 import Webcam from "../components/Webcam.jsx";
 
-import styles from "./Letters.module.css";
+// import styles from "./Letters.module.css";
 import stylesLeren from "./Leren.module.css";
 import stylesUIControls from "./../styles/uiControls.module.css";
 
@@ -83,7 +83,7 @@ class Letters extends Component {
         <>
           <Menu />
           <div className={stylesLeren.LeerGrid}>
-            <div className={styles.letters}>
+            <div className={stylesLeren.letters}>
               {letters.map(letter => {
                 return (
                   <button
