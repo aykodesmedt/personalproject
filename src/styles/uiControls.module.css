@@ -35,3 +35,15 @@
   font-weight: 400;
   padding-top: 2.4rem;
 }
+
+.hulpButton {
+  background-color: var(--blue);
+  border-radius: 4rem;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.8rem 1.6rem;
+}
+
+.hulpButton:hover {
+  /* background-color: var(--yellow); */
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Menu from "../components/Menu.jsx";
 
-import Webcam from "../components/Webcam.jsx";
+// import Webcam from "../components/Webcam.jsx";
 
 // import styles from "./Letters.module.css";
 import stylesLeren from "./Leren.module.css";
@@ -40,7 +40,7 @@ class Letters extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      letter: `A`,
+      letter: ``,
       toggleShow: false,
       classname: `uiControls_letterButton__3IvMv`
     };
@@ -100,12 +100,17 @@ class Letters extends Component {
             </div>
             <div className={stylesLeren.output}>
               <p>{this.state.letter}</p>
-              <Webcam letter={this.state.letter} />
+              {/* <Webcam letter={this.state.letter} /> */}
+              <button
+                onClick={() => this.toggleShow()}
+                className={stylesUIControls.hulpButton}
+              >
+                Sluit hulp
+              </button>
               <img
                 src={`./assets/img/` + this.state.letter + `.png`}
                 alt={this.state.letter}
               />
-              <button onClick={() => this.toggleShow()}>Hide</button>
             </div>
           </div>
         </>
@@ -133,8 +138,13 @@ class Letters extends Component {
             </div>
             <div className={stylesLeren.output}>
               <p>{this.state.letter}</p>
-              <Webcam letter={this.state.letter} />
-              <button onClick={() => this.toggleShow()}>Show</button>
+              {/* <Webcam letter={this.state.letter} /> */}
+              <button
+                onClick={() => this.toggleShow()}
+                className={stylesUIControls.hulpButton}
+              >
+                Open hulp
+              </button>
             </div>
           </div>
         </>

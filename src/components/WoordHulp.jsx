@@ -1,7 +1,5 @@
 import React from "react";
 
-import stylesLayout from "./../styles/layout.module.css";
-
 const alleLetters = [
   `A`,
   `B`,
@@ -34,7 +32,7 @@ const alleLetters = [
 const WoordHulp = ({ letters }) => {
   return (
     <>
-      <div className={stylesLayout.row}>
+      <div>
         {letters.map((letter, id) => {
           if (alleLetters.includes(letter)) {
             return (

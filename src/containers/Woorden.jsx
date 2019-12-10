@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Menu from "../components/Menu.jsx";
 
-import Webcam from "../components/Webcam.jsx";
+// import Webcam from "../components/Webcam.jsx";
 import WoordHulp from "../components/WoordHulp.jsx";
 
 import stylesLeren from "./Leren.module.css";
@@ -59,9 +59,14 @@ class Woorden extends Component {
             </div>
             <div className={stylesLeren.output}>
               {this.state.letters}
-              <Webcam letter={this.state.letter} />
+              {/* <Webcam letter={this.state.letter} /> */}
+              <button
+                onClick={() => this.toggleShow()}
+                className={stylesUIControls.hulpButton}
+              >
+                Sluit hulp
+              </button>
               <WoordHulp letters={this.state.letters} />
-              <button onClick={() => this.toggleShow()}>Hide</button>
             </div>
           </div>
         </>
@@ -89,8 +94,13 @@ class Woorden extends Component {
             </div>
             <div className={stylesLeren.output}>
               {this.state.letters}
-              <Webcam letter={this.state.letter} />
-              <button onClick={() => this.toggleShow()}>Show</button>
+              {/* <Webcam letter={this.state.letter} /> */}
+              <button
+                onClick={() => this.toggleShow()}
+                className={stylesUIControls.hulpButton}
+              >
+                Open hulp
+              </button>
             </div>
           </div>
         </>

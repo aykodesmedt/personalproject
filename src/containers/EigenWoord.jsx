@@ -5,6 +5,7 @@ import Menu from "../components/Menu.jsx";
 
 import stylesLayout from "../styles/layout.module.css";
 import styles from "./EigenWoord.module.css";
+import LeapMotion from "../components/LeapMotion.jsx";
 
 class EigenWoord extends Component {
   constructor(props) {
@@ -49,6 +50,7 @@ class EigenWoord extends Component {
             <WoordHulp letters={this.state.letters} />
           </div>
         </div>
+        <LeapMotion />
       </>
     );
   }
