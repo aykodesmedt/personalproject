@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Menu from "../components/Menu.jsx";
+import Menu from "../components/Menu.jsx.js.js";
 
 // import Webcam from "../components/Webcam.jsx";
 
 // import styles from "./Letters.module.css";
 import stylesLeren from "./Leren.module.css";
-import stylesUIControls from "./../styles/uiControls.module.css";
+import stylesUIControls from "../styles/uiControls.module.css";
 
 const letters = [
   `A`,
@@ -59,7 +59,7 @@ class Letters extends Component {
     letters.forEach(letter => {
       if (letter === e) {
         this.setState(state => ({
-          classname: `uiControls_letterButtonActive__ZQqP9`
+          classname: `uiControls_letterButtonPressed__3eToO`
         }));
       } else {
         this.setState(state => ({

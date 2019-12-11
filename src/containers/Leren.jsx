@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import Menu from "../components/Menu.jsx";
-import Hand from "../components/Hand.jsx";
+import Menu from "../components/Menu.jsx.js.js";
+import Hand from "../components/Hand.jsx.js.js";
 
 import styles from "./Leren.module.css";
-import stylesUIControls from "./../styles/uiControls.module.css";
+import stylesUIControls from "../styles/uiControls.module.css";
 
 const letters = [
   `A`,
@@ -39,13 +39,13 @@ class Leren extends Component {
   constructor(props) {
     super(props);
     this.state = { letter: `A` };
-    this.handleClickLetter = this.handleClickLetter.bind(this);
   }
 
   handleClickLetter(e) {
-    console.log(e);
+    console.log(e.currentTarget.className);
+    e.currentTarget.className = `uiControls_letterButtonPressed__3eToO`;
     this.setState({
-      letter: e
+      letter: e.currentTarget.innerHTML
     });
   }
 
@@ -58,9 +58,7 @@ class Leren extends Component {
             {letters.map(letter => {
               return (
                 <button
-                  onClick={e =>
-                    this.handleClickLetter(e.currentTarget.innerHTML)
-                  }
+                  onClick={e => this.handleClickLetter(e)}
                   key={letter}
                   className={stylesUIControls.letterButton}
                 >

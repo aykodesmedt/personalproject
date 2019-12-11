@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import LettersSVG from "./../components/LettersSVG.jsx";
-import LerenSVG from "./../components/LerenSVG.jsx";
-import WoordenSVG from "./../components/WoordenSVG.jsx";
+import LettersSVG from "../components/LettersSVG.jsx.js.js";
+import LerenSVG from "../components/LerenSVG.jsx.js.js";
+import WoordenSVG from "../components/WoordenSVG.jsx.js.js";
 
 import styles from "./Home.module.css";
 import stylesLayout from "../styles/layout.module.css";

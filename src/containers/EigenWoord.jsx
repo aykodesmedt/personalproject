@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import WoordHulp from "../components/WoordHulp";
 
-import Menu from "../components/Menu.jsx";
+import Menu from "../components/Menu.jsx.js.js";
 
 import stylesLayout from "../styles/layout.module.css";
 import styles from "./EigenWoord.module.css";
-import LeapMotion from "../components/LeapMotion.jsx";
+import TensorFlowTest from "../components/TensorFlowTest.jsx.js.js";
 
 class EigenWoord extends Component {
   constructor(props) {
@@ -50,7 +50,7 @@ class EigenWoord extends Component {
             <WoordHulp letters={this.state.letters} />
           </div>
         </div>
-        <LeapMotion />
+        <TensorFlowTest />
       </>
     );
   }

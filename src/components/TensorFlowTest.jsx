@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+
 import data from "./letterDataNew3000";
-// import * as tf from "@tensorflow/tfjs";
+
+import * as tf from "@tensorflow/tfjs";
 
 // let xs, ys;
 // let model;
@@ -38,16 +40,16 @@ import data from "./letterDataNew3000";
 //   p3Y,
 //   p3Z;
 
-// let labelList = [`A`, `B`, `C`];
+let labelList = [`A`, `B`, `C`];
 
-class LeapMotion extends Component {
+class TensorFlowTest extends Component {
   constructor(props) {
     super(props);
     this.state = { letter: `` };
   }
 
   render() {
-    // tf.tensor1d(labelList, `int32`);
+    tf.tensor1d(labelList, `int32`);
     console.log(data);
     return (
       <>
@@ -57,4 +59,4 @@ class LeapMotion extends Component {
   }
 }
 
-export default LeapMotion;
+export default TensorFlowTest;

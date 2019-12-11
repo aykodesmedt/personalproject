@@ -2,9 +2,9 @@ import React from "react";
 import { Route, NavLink } from "react-router-dom";
 import styles from "./Menu.module.css";
 
-import LerenSVG from "./LerenSVG.jsx";
-import LettersSVG from "./LettersSVG.jsx";
-import WoordenSVG from "./WoordenSVG.jsx";
+import LerenSVG from "./LerenSVG.jsx.js.js";
+import LettersSVG from "./LettersSVG.jsx.js.js";
+import WoordenSVG from "./WoordenSVG.jsx.js.js";
 
 const Menu = () => {
   return (
@@ -26,6 +26,10 @@ const Menu = () => {
               )}
             />
             <p>Leren</p>
+          </NavLink>
+          <NavLink to="/Oefenen" activeClassName={styles.active}>
+            <Route path="/Oefenen" />
+            <p>Oefenen</p>
           </NavLink>
           <NavLink to="/Letters" activeClassName={styles.active}>
             <Route

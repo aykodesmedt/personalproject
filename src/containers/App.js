@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 // import styles from "./App.module.css";
-import colors from "./../styles/colors.module.css";
+import colors from "../styles/colors.module.css";
 
 import Home from "./Home";
 import Leren from "./Leren";
+import OefenenShell from "./OefenenShell";
 import Letters from "./Letters";
 import Woorden from "./Woorden";
 import EigenWoord from "./EigenWoord";
@@ -16,6 +17,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact strict component={Home} />
           <Route path="/leren" component={Leren} />
+          <Route path="/oefenen" component={OefenenShell} />
           <Route path="/letters" component={Letters} />
           <Route path="/woorden" component={Woorden} />
           <Route path="/eigenWoord" component={EigenWoord} />

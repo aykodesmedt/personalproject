@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Menu from "../components/Menu.jsx";
+import Menu from "../components/Menu.jsx.js.js";
 
 // import Webcam from "../components/Webcam.jsx";
-import WoordHulp from "../components/WoordHulp.jsx";
+import WoordHulp from "../components/WoordHulp.jsx.js.js";
 
 import stylesLeren from "./Leren.module.css";
-import stylesUIControls from "./../styles/uiControls.module.css";
+import stylesUIControls from "../styles/uiControls.module.css";
 
 const woorden = [`AAP`, `BOK`, `COL`, `DUN`, `EIK`, `FAN`, `GEN`];
 

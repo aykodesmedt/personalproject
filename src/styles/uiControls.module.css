@@ -1,15 +1,26 @@
 .letterButton {
-  background-color: var(--blue);
-  border: none;
-  border-radius: 0.5rem;
+  /* background-color: var(--blue); */
+  /* border: none; */
+  /* border-radius: 0.5rem; */
+  border: 0.2rem solid var(--blue);
+  background-color: transparent;
   padding: 2rem;
   margin: 1rem;
+  color: white;
+  transition: all 0.3s ease;
 }
 
-.letterButton :active {
-  background-color: var(--purple);
+.letterButton:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+  padding: 2rem;
+  margin: 1rem;
+  color: black;
+}
+
+.letterButtonPressed {
+  background-color: var(--blue);
   border: none;
-  border-radius: 0.5rem;
   padding: 2rem;
   margin: 1rem;
 }
