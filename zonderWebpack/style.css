@@ -1,0 +1,178 @@
+@import "./css/menu.css";
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  min-height: 100vh;
+  background-image: radial-gradient(circle, #52495e, #2c2437);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --blue: #53cabc;
+  --yellow: #f6d135;
+  --purple: #af77f4;
+  --red: #ef4d39;
+}
+
+.letterButton {
+  border: 0.2rem solid var(--blue);
+  background-color: transparent;
+  padding: 2rem;
+  margin: 1rem;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 1.8rem;
+  width: 6rem;
+}
+
+.letterButton:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+  padding: 2rem;
+  margin: 1rem;
+  color: black;
+}
+
+.letterButtonPressed {
+  border: 0.2rem solid var(--blue);
+  background-color: var(--blue);
+  padding: 2rem;
+  margin: 1rem;
+  color: black;
+}
+
+.tegel {
+  /* border-radius: 1rem; */
+  border: 0.2rem solid var(--blue);
+  width: 30.2rem;
+  height: 30.2rem;
+  margin: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.tegel:hover {
+  background-color: var(--blue);
+  color: black;
+}
+
+.tegel > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30.2rem;
+  height: 30.2rem;
+}
+
+.tegel > a > span {
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding-top: 2.4rem;
+}
+
+.hulpButton {
+  background-color: var(--blue);
+  border-radius: 4rem;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.8rem 1.6rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.centerWidth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: white;
+  padding-bottom: 4rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.leerGrid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.chosenLetter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid var(--blue);
+  height: 40rem;
+  margin: 2rem;
+}
+
+.chosenLetter > h2 {
+  font-size: 4.8rem;
+}
+
+.leapLetter {
+  border: 0.2rem solid var(--yellow);
+  height: 10rem;
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leapLetter > h2 {
+  font-size: 2.8rem;
+}
+
+.goodLetter {
+  border: 0.2rem solid var(--blue);
+}
+
+.wrongLetter  {
+  border: 0.2rem solid var(--red);
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid var(--blue);
+  height: 60rem;
+  margin: 2rem;
+}
+
+.output > h2 {
+  font-size: 4.8rem;
+}
+
+.letters {
+  margin: 2rem;
+}
